@@ -66,19 +66,13 @@
 .slide-logo{width:230px;height:auto;margin-top:8px}
 .art{width:220px;height:220px;margin:22px 0}
 .art img{width:100%;height:100%;object-fit:contain}
-.slide .art{width:100%;max-width:340px;height:auto;aspect-ratio:4/3;margin:16px 0 20px;transform:translate(calc(var(--px,0)*14px),calc(var(--py,0)*10px));transition:transform .25s ease-out}
+.slide .art{width:100%;max-width:340px;height:auto;aspect-ratio:4/3;margin:16px 0 20px}
 .float{width:100%;height:100%}
-.f-bounce{animation:bounce 3.2s ease-in-out infinite}
-.f-spin{animation:wobble 4.5s ease-in-out infinite}
-.f-sway{animation:sway 5s ease-in-out infinite}
-@keyframes wobble{25%{transform:translateY(-8px) rotate(-2.5deg)}75%{transform:translateY(-4px) rotate(2.5deg)}}
-@keyframes sway{50%{transform:translate(6px,-10px) rotate(1.5deg)}}
 .slide h1,.slide p,.slide-logo{transition:opacity .45s ease,transform .45s ease}
 .slide:not(.cur) h1,.slide:not(.cur) p,.slide:not(.cur) .slide-logo{opacity:0;transform:translateY(14px)}
 .onb-dots{display:flex;justify-content:center;gap:8px}
 .onb-dots i{width:8px;height:8px;border-radius:5px;background:#c9d4ea;transition:width .25s,background .25s;cursor:pointer}
 .onb-dots i.on{width:28px;background:var(--green)}
-@media (prefers-reduced-motion:reduce){.float{animation:none!important}}
 
 /* categories: chips with icons */
 #onbCats .chip{padding:9px 14px 9px 12px;font-size:14px;background:transparent;transition:background .15s,color .15s,transform .15s}
@@ -95,23 +89,6 @@
 .vibe.on{border-color:var(--green);background:var(--green-soft)}
 .vibe .ill{width:56px;height:56px}
 .vibe .ill svg{width:100%;height:100%;stroke:none;overflow:visible}
-.vibe:hover .ill,.vibe.on .ill{animation:bob 1.6s ease-in-out infinite}
-@keyframes bob{50%{transform:translateY(-4px)}}
-.vibe .hand{transform-origin:32px 36px}
-.vibe.on .hand{animation:spin 2s linear infinite}
-@keyframes spin{to{transform:rotate(360deg)}}
-.vibe.on .wave{animation:waveX 1.4s ease-in-out infinite}
-@keyframes waveX{50%{transform:translateX(3px)}}
-.vibe.on .bar{animation:eq .8s ease-in-out infinite;transform-origin:center bottom;transform-box:fill-box}
-.vibe.on .bar:nth-child(2){animation-delay:.2s}.vibe.on .bar:nth-child(3){animation-delay:.4s}
-@keyframes eq{50%{transform:scaleY(.4)}}
-.vibe.on .star{animation:tw 1.2s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
-.vibe.on .star:nth-of-type(2){animation-delay:.4s}
-@keyframes tw{50%{opacity:.3;transform:scale(.6)}}
-.vibe.on .arrow{animation:hit 1.4s ease-in-out infinite}
-@keyframes hit{0%,100%{transform:translate(6px,-6px)}40%{transform:translate(0,0)}}
-.vibe.on .flame{animation:flick .9s ease-in-out infinite;transform-box:fill-box;transform-origin:center bottom}
-@keyframes flick{50%{transform:scale(1.08,.94) rotate(2deg)}}
 
 /* sign up */
 .or{display:flex;align-items:center;gap:12px;color:var(--muted);font-size:13px;font-weight:600;margin:18px 0}

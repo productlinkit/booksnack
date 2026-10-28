@@ -24,12 +24,4 @@ $('#slides').addEventListener('touchend', e => {
   if (dx > 50) showSlide(slide - 1);
 });
 
-// parallax: the illustration follows the pointer / finger
-const board = $('#view-welcome');
-board.addEventListener('pointermove', e => {
-  const r = board.getBoundingClientRect();
-  board.style.setProperty('--px', ((e.clientX - r.left) / r.width - .5) * 2);
-  board.style.setProperty('--py', ((e.clientY - r.top) / r.height - .5) * 2);
-});
-board.addEventListener('pointerleave', () => { board.style.setProperty('--px', 0); board.style.setProperty('--py', 0); });
 showSlide(0);
