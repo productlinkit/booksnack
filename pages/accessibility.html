@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0F2A5C">
+  <title>Accessibility · BookSnack</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/profile.css">
+</head>
+<body>
+  <div class="app">
+    <main class="view">
+    <header class="subbar"><a class="icon-btn" href="profile.html" aria-label="Back"><svg viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></svg></a><h2>Accessibility</h2></header>
+      <div class="pad">
+        <div class="set-list">
+          <label class="set-row"><div class="grow"><b>Larger text</b><small>Make everything in the app a bit bigger</small></div><span class="switch"><input type="checkbox" data-a11y="large"><span></span></span></label>
+          <label class="set-row"><div class="grow"><b>High contrast</b><small>Darker text and borders for easier reading</small></div><span class="switch"><input type="checkbox" data-a11y="contrast"><span></span></span></label>
+          <label class="set-row"><div class="grow"><b>Reduce motion</b><small>Turn off animations and moving backgrounds</small></div><span class="switch"><input type="checkbox" data-a11y="motion"><span></span></span></label>
+        </div>
+        <p class="onb-sub" style="margin-top:14px;font-size:13px;color:var(--muted)">Font size, spacing and reading theme live in <a class="link" href="reading-preference.html">Reading Preference</a>.</p>
+      </div>
+    </main>
+    <nav class="bottom-nav" data-nav="profile"></nav>
+  </div>
+  <script src="../js/data.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/pages/accessibility.js"></script>
+</body>
+</html>

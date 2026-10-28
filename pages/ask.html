@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0F2A5C">
+  <title>ASK.AI · BookSnack</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/ask.css">
+</head>
+<body>
+  <div class="app">
+    <main class="view" id="historyView" hidden>
+      <div class="pad">
+        <div class="ask-head">
+          <div class="ask-logo"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.6.6 1 1.4 1 2.5h6c0-1.1.4-1.9 1-2.5A6 6 0 0 0 12 3Z"/></svg></div>
+          <div class="grow"><b>ASK AI</b><small>Your Book Assistant</small></div>
+          <span class="badge" id="badge">0 Books</span>
+        </div>
+        <label class="search"><input id="histSearch" placeholder="Search AI Summary History" aria-label="Search history"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></label>
+        <h3 class="sec">Book History</h3>
+        <div id="histList"></div>
+        <h3 class="sec">Ask about a book</h3>
+        <div class="grid" id="pickBook"></div>
+      </div>
+    </main>
+    <main class="view chat" id="chatView" hidden>
+    <header class="subbar"><a class="icon-btn" href="ask.html" aria-label="Back"><svg viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></svg></a><h2>ASK AI</h2></header>
+      <div class="chat-book" id="chatBook"></div>
+      <div class="msgs" id="msgs" aria-live="polite"></div>
+      <div class="suggest" id="suggest"><button class="chip">What's the main idea?</button><button class="chip">Give me 3 takeaways</button><button class="chip">Who should read this?</button><button class="chip">Recommend similar books</button></div>
+      <form class="chat-form" id="chatForm"><input id="chatInput" placeholder="Ask anything about this book..." aria-label="Your question" autocomplete="off"><button aria-label="Send"><svg viewBox="0 0 24 24"><path d="M4 12 20 4l-6 16-3-7z"/></svg></button></form>
+    </main>
+    <nav class="bottom-nav" data-nav="ask"></nav>
+  </div>
+  <script src="../js/data.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/pages/ask.js"></script>
+</body>
+</html>

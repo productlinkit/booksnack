@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0F2A5C">
+  <title>Explore · BookSnack</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/explore.css">
+</head>
+<body>
+  <div class="app">
+    <main class="view">
+      <div class="pad">
+        <label class="search"><input id="searchInput" placeholder="Find your favorite book..." aria-label="Search books"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></label>
+        <a class="video-banner" href="videos.html">
+          <span class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          <b>Video Summary</b><small>Watch short book summaries</small>
+        </a>
+        <h3 class="sec">Categories</h3>
+        <div class="chips" id="chips"></div>
+        <h3 class="sec" id="resultsTitle">Books</h3>
+        <div id="bookGrid"></div>
+      </div>
+    </main>
+    <nav class="bottom-nav" data-nav="explore"></nav>
+  </div>
+  <script src="../js/data.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/pages/explore.js"></script>
+</body>
+</html>

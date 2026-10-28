@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0F2A5C">
+  <title>Set your reading vibe · BookSnack</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/onboarding.css">
+</head>
+<body>
+  <div class="app">
+    <main class="view onb" id="view-vibes">
+      <div class="shape-bg" aria-hidden="true"><i class="shape-l"></i><i class="shape-r"></i></div>
+      <div class="onb-top"><div class="steps"><i class="on"></i><i class="on"></i><i></i></div><a class="skip" href="signup.html">Skip</a></div>
+      <div class="onb-body">
+        <h1>Set your<br><span class="hl">reading vibe</span></h1>
+        <p class="onb-sub">Customize your experience to match the way you love discovering books 💫</p>
+        <div class="vibes" id="onbVibes"></div>
+      </div>
+      <div class="onb-foot"><button class="btn-primary" id="vibesNext" disabled>Continue</button></div>
+    </main>
+  </div>
+  <script src="../js/data.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/pages/vibes.js"></script>
+</body>
+</html>

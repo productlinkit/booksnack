@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0F2A5C">
+  <title>Welcome · BookSnack</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/onboarding.css">
+</head>
+<body>
+  <div class="app">
+    <main class="view onb" id="view-welcome">
+      <div class="board-bg" aria-hidden="true">
+        <div class="bg bg-0 on"><i class="shape-l"></i><i class="shape-r"></i></div>
+        <div class="bg bg-1"><i class="shape-l"></i><i class="shape-r"></i></div>
+        <div class="bg bg-2"><i class="shape-l"></i><i class="shape-r"></i></div>
+      </div>
+      <div class="onb-top"><span></span><a class="skip" href="categories.html">Skip</a></div>
+      <div class="slides" id="slides">
+        <div class="slide">
+          <h1>Welcome to</h1>
+          <img class="slide-logo" src="../assets/logo.png" alt="BookSnack">
+          <div class="art"><div class="float f-bounce"><img src="../assets/onboarding/welcome.png" alt="Two friends greeting each other with a book"></div></div>
+          <p>Learn something meaningful every time you open the app — one quick scroll at a time.</p>
+        </div>
+        <div class="slide">
+          <h1>Bite-Sized<br><span class="hl">Knowledge</span></h1>
+          <div class="art"><div class="float f-spin"><img src="../assets/onboarding/library.png" alt="Phone screen filled with a bookshelf and floating books"></div></div>
+          <p>Explore bite-sized summaries and unlock key insights from books in minutes.</p>
+        </div>
+        <div class="slide">
+          <h1>Ready to<br><span class="hl">Dive In?</span></h1>
+          <div class="art"><div class="float f-sway"><img src="../assets/onboarding/reader.png" alt="Reader sitting beside a phone-shaped bookshelf"></div></div>
+          <p>Start your journey and discover powerful ideas from great books in minutes.</p>
+        </div>
+      </div>
+      <div class="onb-foot">
+        <button class="btn-primary" id="boardNext">Next</button>
+        <div class="onb-dots" id="boardDots"><i class="on"></i><i></i><i></i></div>
+      </div>
+    </main>
+  </div>
+  <script src="../js/data.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/pages/welcome.js"></script>
+</body>
+</html>

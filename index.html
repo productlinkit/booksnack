@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0F2A5C">
+  <title>BookSnack</title>
+  <style>html,body{margin:0;height:100%;background:#0F2A5C}</style>
+  <script>
+    // Entry point: first-time visitors see onboarding, returning readers go straight to their feed.
+    var done = false;
+    try { done = JSON.parse(localStorage.getItem('bs_onboarded')); } catch (e) {}
+    location.replace(done ? 'pages/home.html' : 'pages/splash.html');
+  </script>
+</head>
+<body></body>
+</html>

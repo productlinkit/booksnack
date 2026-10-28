@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0F2A5C">
+  <title>Profile · BookSnack</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/profile.css">
+</head>
+<body>
+  <div class="app">
+    <main class="view">
+      <div class="pad">
+        <a class="profile-hero" href="edit-profile.html"><div class="avatar" id="avatar">P</div><div class="grow"><b id="name"></b><small id="email"></small></div><span class="edit">Edit</span></a>
+        <div class="stat-row"><a class="stat" href="liked-books.html"><b id="sLiked">0</b><small>Liked</small></a><a class="stat" href="library.html"><b id="sSaved">0</b><small>Saved</small></a><a class="stat" href="highlights.html"><b id="sHl">0</b><small>Highlights</small></a></div>
+        <h3 class="sec">User Information</h3>
+        <ul class="menu">
+          <li><a href="edit-profile.html"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>User Profile</a></li>
+          <li><a href="subscription.html"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18"/></svg>Manage Subscription<span class="count" id="plan">Free</span></a></li>
+          <li><a href="reading-preference.html"><svg viewBox="0 0 24 24"><path d="M3 5h7a2 2 0 0 1 2 2v13a2 2 0 0 0-2-2H3zM21 5h-7a2 2 0 0 0-2 2v13a2 2 0 0 1 2-2h7z"/></svg>Reading Preference</a></li>
+          <li><a href="accessibility.html"><svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="2"/><path d="M5 9h14M12 9v6l-3 6M12 15l3 6"/></svg>Accessibility</a></li>
+          <li><a href="notification-settings.html"><svg viewBox="0 0 24 24"><path d="M6 9a6 6 0 1 1 12 0c0 6 2 7 2 7H4s2-1 2-7M10 20a2 2 0 0 0 4 0"/></svg>Notification Settings</a></li>
+          <li><a href="language.html"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>Language Preference</a></li>
+          <li><a href="liked-books.html"><svg viewBox="0 0 24 24"><path d="M12 21s-8-5.2-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 5.8-8 11-8 11Z"/></svg>Books You've Liked</a></li>
+          <li><a href="highlights.html"><svg viewBox="0 0 24 24"><path d="m4 20 4-1L19 8l-3-3L5 16zM14 6l3 3"/></svg>My Highlights</a></li>
+        </ul>
+        <h3 class="sec">Help &amp; Support</h3>
+        <ul class="menu">
+          <li><a href="faqs.html"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.7.4-1 1-1 1.7M12 17h.01"/></svg>FAQs</a></li>
+          <li><a href="splash.html"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 0 2.3-5.7M4 4v4h4"/></svg>Replay Onboarding</a></li>
+        </ul>
+        <h3 class="sec"></h3>
+        <button class="btn-danger" id="logout">Log out</button>
+      </div>
+    </main>
+    <nav class="bottom-nav" data-nav="profile"></nav>
+  </div>
+  <script src="../js/data.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/pages/profile.js"></script>
+</body>
+</html>

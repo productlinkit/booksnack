@@ -1,0 +1,153 @@
+/* ===== Onboarding: splash, welcome slides, categories, vibes, sign up, trial, all set ===== */
+.view.onb{inset:0;background:#fff;display:flex;flex-direction:column;overflow:hidden}
+.onb h1{font-size:30px;line-height:1.15;font-weight:800;color:var(--ink);letter-spacing:-.5px}
+.hl{color:var(--green)}
+.onb-top{display:flex;justify-content:space-between;align-items:center;padding:18px 20px 6px;min-height:52px}
+.skip{color:var(--muted);font-weight:700;font-size:14px;padding:6px 4px}
+.onb-top.dark .skip{color:#c7d3ea}
+.onb-body{flex:1;overflow-y:auto;padding:8px 24px 16px}
+.onb-body.center{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.onb-sub{color:var(--text-2);font-size:14px;font-weight:500;line-height:1.55;margin:10px 0 22px}
+.onb-foot{padding:12px 24px 24px;display:flex;flex-direction:column;gap:16px}
+.steps{display:flex;gap:6px}
+.steps i{width:28px;height:5px;border-radius:4px;background:rgba(15,42,92,.15)}
+.steps i.on{background:var(--green)}
+
+/* solid shapes slide in from left & right and meet */
+.shape-bg{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.shape-bg i{position:absolute;border-radius:50%;aspect-ratio:1}
+.shape-l{background:var(--green-soft);animation:inL .9s cubic-bezier(.22,1,.36,1) both,floatL 9s ease-in-out .9s infinite}
+.shape-r{background:var(--peach);animation:inR 1s cubic-bezier(.22,1,.36,1) .15s both,floatR 10s ease-in-out 1.15s infinite}
+@keyframes inL{from{transform:translateX(-100%)}}
+@keyframes inR{from{transform:translateX(100%)}}
+@keyframes floatL{50%{transform:translate(10px,8px)}}
+@keyframes floatR{50%{transform:translate(-12px,-8px)}}
+.shape-bg~*{position:relative;z-index:1}
+@media (prefers-reduced-motion:reduce){.shape-bg i{animation:none!important}}
+/* each page gets its own arrangement */
+#view-splash{background:var(--navy)}
+#view-splash .shape-l{width:170%;left:-95%;top:-35%;background:#14336B}
+#view-splash .shape-r{width:170%;left:25%;top:50%;background:#1B3F82}
+#view-categories .shape-l{width:170%;left:-95%;top:-28%}
+#view-categories .shape-r{width:180%;left:-28%;top:38%}
+#view-vibes .shape-l{width:170%;left:-90%;top:42%}
+#view-vibes .shape-r{width:150%;left:20%;top:-40%}
+#view-signup .shape-l{width:140%;left:-70%;top:55%;background:var(--peach)}
+#view-signup .shape-r{width:160%;left:35%;top:-45%;background:var(--green-soft)}
+#view-trial{background:var(--navy)}
+#view-trial .shape-l{width:160%;left:-90%;top:-30%;background:#14336B}
+#view-trial .shape-r{width:170%;left:30%;top:45%;background:#1B3F82}
+#view-allset .shape-l{width:150%;left:-80%;top:-20%}
+#view-allset .shape-r{width:150%;left:30%;top:50%}
+
+/* splash */
+.splash{flex:1;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px}
+.splash-logo{width:240px;height:auto;animation:pop .6s cubic-bezier(.2,1.4,.4,1) both;margin-bottom:4px}
+.splash p{color:#b9c6e0;font-weight:500;font-size:14px}
+.splash-load{width:120px;height:4px;border-radius:4px;background:rgba(255,255,255,.15);margin-top:28px;overflow:hidden}
+.splash-load span{display:block;height:100%;width:0;background:var(--yellow);border-radius:4px;animation:load 1.6s ease forwards}
+@keyframes load{to{width:100%}}
+
+/* welcome slides */
+.board-bg{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.board-bg .bg{position:absolute;inset:0;display:none}
+.board-bg .bg.on{display:block}
+.board-bg .bg i{position:absolute;border-radius:50%;aspect-ratio:1}
+.bg-0 .shape-l{width:170%;left:-95%;top:-25%;background:var(--green-soft)}
+.bg-0 .shape-r{width:180%;left:-30%;top:45%;background:var(--peach)}
+.bg-1 .shape-l{width:160%;left:-90%;top:40%;background:var(--peach)}
+.bg-1 .shape-r{width:160%;left:30%;top:-35%;background:var(--green-soft)}
+.bg-2 .shape-l{width:150%;left:-75%;top:55%;background:var(--green-soft)}
+.bg-2 .shape-r{width:170%;left:35%;top:-30%;background:var(--peach)}
+#view-welcome .onb-top,#view-welcome .slides,#view-welcome .onb-foot{position:relative;z-index:1}
+.slides{flex:1;display:flex;overflow:hidden;touch-action:pan-y}
+.slide{min-width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 28px;transition:transform .35s ease}
+.slide p{color:var(--text-2);font-weight:500;font-size:14px;line-height:1.55;max-width:300px}
+.slide-logo{width:230px;height:auto;margin-top:8px}
+.art{width:220px;height:220px;margin:22px 0}
+.art img{width:100%;height:100%;object-fit:contain}
+.slide .art{width:100%;max-width:340px;height:auto;aspect-ratio:4/3;margin:16px 0 20px;transform:translate(calc(var(--px,0)*14px),calc(var(--py,0)*10px));transition:transform .25s ease-out}
+.float{width:100%;height:100%}
+.f-bounce{animation:bounce 3.2s ease-in-out infinite}
+.f-spin{animation:wobble 4.5s ease-in-out infinite}
+.f-sway{animation:sway 5s ease-in-out infinite}
+@keyframes wobble{25%{transform:translateY(-8px) rotate(-2.5deg)}75%{transform:translateY(-4px) rotate(2.5deg)}}
+@keyframes sway{50%{transform:translate(6px,-10px) rotate(1.5deg)}}
+.slide h1,.slide p,.slide-logo{transition:opacity .45s ease,transform .45s ease}
+.slide:not(.cur) h1,.slide:not(.cur) p,.slide:not(.cur) .slide-logo{opacity:0;transform:translateY(14px)}
+.onb-dots{display:flex;justify-content:center;gap:8px}
+.onb-dots i{width:8px;height:8px;border-radius:5px;background:#c9d4ea;transition:width .25s,background .25s;cursor:pointer}
+.onb-dots i.on{width:28px;background:var(--green)}
+@media (prefers-reduced-motion:reduce){.float{animation:none!important}}
+
+/* categories: chips with icons */
+#onbCats .chip{padding:9px 14px 9px 12px;font-size:14px;background:transparent;transition:background .15s,color .15s,transform .15s}
+#onbCats .chip svg{width:17px;height:17px}
+#onbCats .chip:active{transform:scale(.95)}
+#onbCats .chip.on{background:var(--green)}
+#onbCats .chip.on svg{stroke:#fff;animation:pop .35s cubic-bezier(.2,1.6,.4,1)}
+
+/* vibes with custom illustrations */
+.vibes{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.vibe{text-align:left;border:2px solid var(--line);border-radius:16px;padding:14px;background:#fff;display:flex;flex-direction:column;align-items:flex-start;gap:6px;transition:border-color .15s,background .15s}
+.vibe b{font-size:14px}
+.vibe small{margin:0}
+.vibe.on{border-color:var(--green);background:var(--green-soft)}
+.vibe .ill{width:56px;height:56px}
+.vibe .ill svg{width:100%;height:100%;stroke:none;overflow:visible}
+.vibe:hover .ill,.vibe.on .ill{animation:bob 1.6s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-4px)}}
+.vibe .hand{transform-origin:32px 36px}
+.vibe.on .hand{animation:spin 2s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.vibe.on .wave{animation:waveX 1.4s ease-in-out infinite}
+@keyframes waveX{50%{transform:translateX(3px)}}
+.vibe.on .bar{animation:eq .8s ease-in-out infinite;transform-origin:center bottom;transform-box:fill-box}
+.vibe.on .bar:nth-child(2){animation-delay:.2s}.vibe.on .bar:nth-child(3){animation-delay:.4s}
+@keyframes eq{50%{transform:scaleY(.4)}}
+.vibe.on .star{animation:tw 1.2s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.vibe.on .star:nth-of-type(2){animation-delay:.4s}
+@keyframes tw{50%{opacity:.3;transform:scale(.6)}}
+.vibe.on .arrow{animation:hit 1.4s ease-in-out infinite}
+@keyframes hit{0%,100%{transform:translate(6px,-6px)}40%{transform:translate(0,0)}}
+.vibe.on .flame{animation:flick .9s ease-in-out infinite;transform-box:fill-box;transform-origin:center bottom}
+@keyframes flick{50%{transform:scale(1.08,.94) rotate(2deg)}}
+
+/* sign up */
+.or{display:flex;align-items:center;gap:12px;color:var(--muted);font-size:13px;font-weight:600;margin:18px 0}
+.or::before,.or::after{content:"";flex:1;height:1px;background:var(--line)}
+.onb-note{text-align:center;font-size:14px;color:var(--text-2);margin-top:20px}
+
+/* trial */
+.trial{flex:1;color:#fff;display:flex;flex-direction:column;padding:0 24px 24px;overflow-y:auto}
+.trial .onb-top{padding:18px 0 6px}
+.trial h1{color:#fff;margin-top:6px}
+.trial .onb-sub{color:#b9c6e0}
+.feats{list-style:none;display:flex;flex-direction:column;gap:14px}
+.feats li{display:flex;gap:12px;align-items:center}
+.feats span{width:38px;height:38px;flex:none;border-radius:12px;background:rgba(255,255,255,.1);color:var(--yellow);display:grid;place-items:center;font-size:18px}
+.feats b{font-size:14px}.feats small{color:#b9c6e0;margin:0}
+.trial-btns{margin-top:auto;display:flex;flex-direction:column;gap:12px;text-align:center}
+.trial-btns small{color:#b9c6e0}
+
+/* plan cards (dark, on trial page) */
+.plans{display:flex;flex-direction:column;gap:16px;margin:24px 0 20px}
+.plan{position:relative;border:2px solid rgba(255,255,255,.18);border-radius:18px;padding:16px;background:rgba(255,255,255,.04);cursor:pointer;transition:border-color .2s,background .2s}
+.plan.on{border-color:var(--yellow);background:rgba(255,138,61,.08)}
+.plan em{position:absolute;top:-11px;right:16px;background:var(--yellow);color:var(--ink);font-style:normal;font-weight:800;font-size:11px;padding:4px 10px;border-radius:999px;text-transform:uppercase;letter-spacing:.4px}
+.plan em.alt{background:var(--green-soft);color:var(--green)}
+.plan-head{display:flex;align-items:center;gap:12px}
+.plan b{font-size:16px}.plan small{color:#d7e0f1;font-size:12.5px}
+.radio{width:22px;height:22px;flex:none;border-radius:50%;border:2px solid rgba(255,255,255,.5);display:grid;place-items:center}
+.plan.on .radio{border-color:var(--yellow)}
+.plan.on .radio::after{content:"";width:10px;height:10px;border-radius:50%;background:var(--yellow)}
+.plan-toggle{width:32px;height:32px;flex:none;border-radius:50%;background:rgba(255,255,255,.1);display:grid;place-items:center;color:#fff}
+.plan-toggle svg{width:18px;height:18px;transition:transform .25s}
+.plan.open .plan-toggle svg{transform:rotate(180deg)}
+.plan-detail{list-style:none;overflow:hidden;max-height:0;transition:max-height .3s ease,margin .3s ease}
+.plan.open .plan-detail{max-height:200px;margin-top:12px}
+.plan-detail li{font-size:13px;color:#d7e0f1;padding:5px 0 5px 22px;position:relative}
+.plan-detail li::before{content:"✓";position:absolute;left:0;color:var(--yellow);font-weight:800}
+
+/* all set */
+.allset-art{width:240px;height:240px;margin:0 0 8px}
